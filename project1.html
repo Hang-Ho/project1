@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="project1.css">
     <title>Movies "R" Us</title>
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <link rel="stylesheet" href="project1.css">
+    <style type="text/css">
+    body {
+      background-color: slategrey;
+    }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Welcome To Movies "R" Us</h1>
-        <form>
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Search..."
-            />
+    <div class="ui massive black message">
+        <div class="header">
+            Movies "R" Us
+        </div>
+        
+        <div class="ui vertical menu">
+            <div id="genre-menu" class="ui dropdown item">
+              MOODS
+              <i id="dropdown-btn" class="dropdown icon"></i>
+              <div id="menu-btn" class="menu">
+                <a class="item">Anime</a>
+                <a class="item">Sci-Fi</a>
+                <a class="item">Horror</a>
+                <a class="item">Comedy</a>
+                <a class="item">Action</a>
+                <a class="item">Fantasy</a>
+                <a class="item">Crime</a>
+                <a class="item">Mystery</a>
+                <a class="item">Family</a>
+                <a class="item">Western</a>
+                <a class="item">Romance</a>
+              </div>
+            </div>
           </div>
+
+    
+
+    <div class="ui center aligned container">
+        <h1 class="text-align:center">Search For Any Movies</h1>
+        <div id="search-category" class="ui category search">
+            <div id="search-btn" class="ui icon input">
+              <input class="prompt" type="text" placeholder="Search Movies...">
+              <i id="search-icon" class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+
   
           <button type="submit" class="btn" id="search">
             Search A movie
@@ -42,5 +73,4 @@
 
     <script src="project1.js"></script>
 </body>
-
 </html>
