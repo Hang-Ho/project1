@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         const urlMovie = `https://imdb8.p.rapidapi.com/title/find/?q=${movieName}`;
         // const apiKeyMovie = "5ffb9acc5cmshc1874c0a36de023p17b5c9jsn36d5f1dfe287";
-        const apiKey = "366d188682msh9632395dbe1e5f3p1336bdjsn8376bb207e7c";
+        const apiKey = "3040cabe73msh1cdad3f627aac19p18c008jsnee48e96015c1";
 
         const urlLink = " https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + movieName;
         const apiKeyLink = "a33a3a4458msh65f6788cc06d484p1ff195jsn955840848a9d";
@@ -17,7 +17,9 @@ $(document).ready(function () {
             method: 'GET',
             headers: {
                 'x-rapidapi-host': 'imdb8.p.rapidapi.com',
-                'x-rapidapi-key': apiKey
+                'x-rapidapi-key': apiKey,
+                'x-ratelimit-requests-limit' : 2
+
             }
         }).then(res => {
             console.log("info", res);
@@ -108,8 +110,11 @@ $(document).ready(function () {
             // })
 
             const data = res.results;
+            const grid = $('<div class="ui three column grid">');
+            const row = $('<div class=" row">');
             for (let i = 0; i < 3; i++) {
                 console.log(data.length);
+                let column = $('<div class="column">column 1</div>');
                 const movieDiv = $("<div>").attr('id', i);
 
                 const poster = $("<img>").attr('src', data[i].image.url).width(200);
@@ -131,7 +136,8 @@ $(document).ready(function () {
                 movieDiv.append(poster, nameAndyear, runTime, actorDiv);
 
                 const id = data[i].id.split("/")[2];
-                $("#movies-container").append(movieDiv);
+               
+         
                 console.log(id);
 
                 const urlRatingsMovie = `https://imdb8.p.rapidapi.com/title/get-ratings/?tconst=${id}`;
@@ -143,7 +149,8 @@ $(document).ready(function () {
                     method: 'GET',
                     headers: {
                         "x-rapidapi-host": "imdb8.p.rapidapi.com",
-                        "x-rapidapi-key": apiKey
+                        "x-rapidapi-key": apiKey,
+                        'x-ratelimit-requests-limit' : 2
                     }
                 }).then(resRating => {
                     $.ajax({
@@ -151,7 +158,8 @@ $(document).ready(function () {
                         method: "GET",
                         headers: {
                             "x-rapidapi-host": "imdb8.p.rapidapi.com",
-                            "x-rapidapi-key": apiKey
+                            "x-rapidapi-key": apiKey,
+                            'x-ratelimit-requests-limit' : 2
                         }
                     }).then(resPlots => {
                         $.ajax({
@@ -159,10 +167,15 @@ $(document).ready(function () {
                             method: "GET",
                             headers: {
                                 "x-rapidapi-host": "imdb8.p.rapidapi.com",
-                                "x-rapidapi-key": apiKey
+                                "x-rapidapi-key": apiKey,
+                                'x-ratelimit-requests-limit' : 2
                             }
                         }).then(res => {
 
+                            column.append(movieDiv);
+                            row.append(column);
+                            grid.append(row);
+                            $("#movies-container").append(grid);
                             $.ajax({
                                 url: urlLink,
                                 method: "GET",
@@ -186,7 +199,12 @@ $(document).ready(function () {
                                     link.text(`  ${res.results[0].locations[j].display_name}  `);
                                     linkDiv.append(link);
                                 }
-                                $("#movies-container").append(linkDiv);
+
+                              console.log("break")
+                                column.append(movieDiv, linkDiv);
+                                row.append(column);
+                                grid.append(row);
+                                $("#movies-container").append(grid);
                             })
                         })
                     })
