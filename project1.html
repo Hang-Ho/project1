@@ -44,9 +44,9 @@
     <div class="ui center aligned container">
         <h1 class="text-align:center">Search For Any Movies</h1>
         <div id="search-category" class="ui category search">
-            <div id="search-btn" class="ui icon input">
-              <input class="prompt" type="text" placeholder="Search Movies...">
-              <i id="search-icon" class="search icon"></i>
+            <div class="ui icon input">
+              <input class="prompt" id="input-box" type="text" placeholder="Search Movies...">
+              <button id="search-btn"><i id="search-icon" class="search icon"></i></button>
             </div>
             <div class="results"></div>
           </div>
@@ -55,21 +55,15 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
-
   
-          <button class="btn" id="search-btn">
-            Search A movie
-          </button>
-        </form>
-  
-        <div id="movies-searchable"></div>
+        <div class="container" id="movies-searchable"></div>
         <div id="movies-container"></div>
       </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-    <script src="semantic/dist/semantic.min.js"></script>
+    <!-- <script src="semantic/dist/semantic.min.js"></script> -->
 
     <script src="project1.js"></script>
 </body>
