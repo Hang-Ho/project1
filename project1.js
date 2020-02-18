@@ -21,7 +21,7 @@ $(document).ready(function () {
             }
         }).then(res => {
             console.log("info", res);
-            
+
             // const data = res.results[0];
             // const movieDiv = $("<div class='jumbotron'>");
             // const poster = $("<img>").attr('src', data.image.url).width(200);
@@ -188,6 +188,7 @@ $(document).ready(function () {
                                 }
                                 $("#movies-container").append(linkDiv);
                             })
+                            
                         })
                     })
                 })
