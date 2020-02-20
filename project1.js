@@ -99,6 +99,21 @@ $(document).ready(function () {
             }
         })
     })
-})
+
+// $.ajax({
+//     url: urlMovie2,
+//     method: "GET",
+//     headers: {
+//         "x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com",
+//         "x-rapidapi-key": "693111e668msh3afac24509ee844p1ff2abjsnf2c3aa32ebb9"
+//     }
+// }).then (res3 => {
+//     console.log('hello world')
+//     // console.log(movieId)
+//     console.log(res3);
+// })
+
+});
+
 
 
