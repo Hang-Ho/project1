@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="project1.css">
     <title>Movies "R" Us</title>
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <link rel="stylesheet" href="project1.css">
+    <style type="text/css">
+    body {
+      background-color: slategrey;
+    }
+    .dropdown {
+        font-weight: bold;
+        
+    }
+    .movie {
+        float: right;
+        width: 17%;
+    }
+    #container {
+        
+    }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Welcome To Movies "R" Us</h1>
-        <form>
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Search..."
-            />
-          </div>
+    <div class="ui massive black message">
+        <div class="header">
+            Welcome "2" Movies "R" Us
+        <img class="movie" src="movie3.png" alt="">
+        </div>
+        
+        <select id="dropdown" class="ui selection dropdown">
+            <option value="">Genre/Moods</option>
+            <option value="1">Action</option>
+            <option value="0">Animation</option>
+            <option value="0">Family</option>
+            <option value="0">Horror</option>
+            <option value="0">Sci-Fi</option>
+            <option value="0">Documentary</option>
+            <option value="0">Mystery</option>
+            <option value="0">Romance</option>
+            <option value="0">Comedy</option>
+            <option value="0">Fantasy</option>
+            <option value="0">War</option>
+            <option value="0">Western</option>
+          </select>
+
+    
+
+    <div id="container" class="ui center aligned container ">
+        <h1 class="text-align:center">Search For Any Movies</h1>
+        <div id="search-category" class="ui category search">
+            <div class="ui icon input">
+                <input class="prompt" id="input-box" type="text" placeholder="Search Movies...">
+
+            </div>
+              <div class="results"></div>
+        </div>
+        <button id="search-btn" class="ui secondary button"><i class="big search icon"></i></button>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+
   
-          <button type="submit" class="btn" id="search">
-            Search A movie
-          </button>
-        </form>
-  
-        <div id="movies-searchable"></div>
-        <div id="movies-container"></div>
+        <div class="container" id="movies-searchable"></div>
+        <div id="movies-container">
+            
+
+        </div>
       </div>
+
+
+        
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-    <script src="semantic/dist/semantic.min.js"></script>
+    <!-- <script src="semantic/dist/semantic.min.js"></script> -->
 
     <script src="project1.js"></script>
 </body>
-
 </html>
