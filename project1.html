@@ -15,12 +15,20 @@
         font-weight: bold;
         
     }
+    .movie {
+        float: right;
+        width: 17%;
+    }
+    #container {
+        
+    }
     </style>
 </head>
 <body>
     <div class="ui massive black message">
         <div class="header">
             Welcome "2" Movies "R" Us
+        <img class="movie" src="movie3.png" alt="">
         </div>
         
         <select id="dropdown" class="ui selection dropdown">
@@ -41,10 +49,11 @@
 
     
 
-    <div class="ui center aligned container ">
+    <div id="container" class="ui center aligned container ">
         <h1 class="text-align:center">Search For Any Movies</h1>
         <div id="search-category" class="ui category search">
             <div class="ui icon input">
+                <input class="prompt" id="input-box" type="text" placeholder="Search Movies...">
 
             </div>
               <div class="results"></div>
@@ -57,7 +66,10 @@
 
   
         <div class="container" id="movies-searchable"></div>
-        <div id="movies-container"></div>
+        <div id="movies-container">
+            
+
+        </div>
       </div>
 
 
