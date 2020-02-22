@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Movies "R" Us</title>
+    <title>Movies Bandits</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
     <link rel="stylesheet" href="project1.css">
     <style type="text/css">
+    
     body {
-      background-color: slategrey;
+
       
-    }
+      background-image: url(image3.webp);
+      min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    color: white;
+      
+      }
     .dropdown {
         font-weight: bold;
     }
@@ -25,59 +34,49 @@
     .movie {
         float: right;
         width: 17%;
-    }
-    /* #container {
         
-    } */
+    }
+  
+     
+   
     </style>
 </head>
 <body>
     <div class="ui massive black message">
         <div class="header">
-            Welcome "2" Movies "R" Us
+            "The Movie-Bandits!"
         <img class="movie" src="movie3.png" alt="">
+
         </div>
         
-        <select id="dropdown" class="ui selection dropdown">
-            <option value="">Genre/Moods</option>
-            <option value="1">Action</option>
-            <option value="0">Animation</option>
-            <option value="0">Family</option>
-            <option value="0">Horror</option>
-            <option value="0">Sci-Fi</option>
-            <option value="0">Documentary</option>
-            <option value="0">Mystery</option>
-            <option value="0">Romance</option>
-            <option value="0">Comedy</option>
-            <option value="0">Fantasy</option>
-            <option value="0">War</option>
-            <option value="0">Western</option>
-          </select>
+        
 
     
 
     <div id="container" class="ui center aligned container ">
-        <h1 class="text-align:center">Search For Any Movies</h1>
+        <h1 class="text-align:center">The Search Bandit</h1>
         <div id="search-category" class="ui category search">
             <div class="ui icon input">
-                <input id="input-box" class="prompt" type="text" placeholder="Search Movies...">
+
+                <input class="prompt" id="input-box" type="text" placeholder="Search Movies...">
+
+
             </div>
               <div class="results"></div>
         </div>
         <button id="search-btn" class="ui secondary button"><i class="big search icon"></i></button>
+        
     </div>
     </div>
 
 
-
-
-    <div class="ui basic modal" id='error'>
+    <div id="error" class="ui basic modal">
         <div class="ui icon header">
           <i class="archive icon"></i>
-          Archive Old Messages
+          Search Bandit Error 101!
         </div>
         <div class="content">
-          <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+          <p>Please Check Spelling And Try Again.</p>
         </div>
         <div class="actions">
           <div class="ui red basic cancel inverted button">
@@ -90,7 +89,8 @@
           </div>
         </div>
       </div>
-  <!--  -->
+
+
   <div class="container" id="movies-searchable"></div>
   <div id="movies-container">
       
