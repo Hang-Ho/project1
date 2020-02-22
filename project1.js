@@ -8,7 +8,8 @@ $(document).ready(function () {
         const urlMovie = `https://imdb8.p.rapidapi.com/title/find/?q=${movieName}`;
         // const apiKeyMovie = "5ffb9acc5cmshc1874c0a36de023p17b5c9jsn36d5f1dfe287";
         // const apiKey = "3040cabe73msh1cdad3f627aac19p18c008jsnee48e96015c1";
-        const apiKey = "366d188682msh9632395dbe1e5f3p1336bdjsn8376bb207e7c";
+        // const apiKey = "366d188682msh9632395dbe1e5f3p1336bdjsn8376bb207e7c";
+        const apiKey = "03ae2b5221msh5e4c93eb2174ce3p1436b2jsne59860dac7f3";
 
         const ids = [];
         const movieNameArr = [];
