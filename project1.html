@@ -10,18 +10,25 @@
     <style type="text/css">
     body {
       background-color: slategrey;
+      
     }
     .dropdown {
         font-weight: bold;
-        
+    }
+    p h4{
+      color: white;
+    }
+    .column{
+      text-align: center;
+      
     }
     .movie {
         float: right;
         width: 17%;
     }
-    #container {
+    /* #container {
         
-    }
+    } */
     </style>
 </head>
 <body>
@@ -53,33 +60,51 @@
         <h1 class="text-align:center">Search For Any Movies</h1>
         <div id="search-category" class="ui category search">
             <div class="ui icon input">
-
+                <input id="input-box" class="prompt" type="text" placeholder="Search Movies...">
             </div>
               <div class="results"></div>
         </div>
         <button id="search-btn" class="ui secondary button"><i class="big search icon"></i></button>
     </div>
     </div>
+
+
+
+
+    <div class="ui basic modal" id='error'>
+        <div class="ui icon header">
+          <i class="archive icon"></i>
+          Archive Old Messages
+        </div>
+        <div class="content">
+          <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+        </div>
+        <div class="actions">
+          <div class="ui red basic cancel inverted button">
+            <i class="remove icon"></i>
+            No
+          </div>
+          <div class="ui green ok inverted button">
+            <i class="checkmark icon"></i>
+            Yes
+          </div>
+        </div>
+      </div>
+  <!--  -->
+  <div class="container" id="movies-searchable"></div>
+  <div id="movies-container">
+      
+
+  </div>
+</div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
 
-  
-        <div class="container" id="movies-searchable"></div>
-        <div id="movies-container">
-            
-
-        </div>
-      </div>
-
 
         
-
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-    <!-- <script src="semantic/dist/semantic.min.js"></script> -->
-
     <script src="project1.js"></script>
 </body>
 </html>
