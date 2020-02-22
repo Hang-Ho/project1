@@ -10,6 +10,7 @@
     <style type="text/css">
     
     body {
+
       
       background-image: url(image3.webp);
       min-height: 100vh;
@@ -22,18 +23,22 @@
       }
     .dropdown {
         font-weight: bold;
-        
+    }
+    p h4{
+      color: white;
+    }
+    .column{
+      text-align: center;
+      
     }
     .movie {
         float: right;
         width: 17%;
         
     }
-    #container {
-        
-    }
-    
-    
+  
+     
+   
     </style>
 </head>
 <body>
@@ -55,6 +60,7 @@
 
                 <input class="prompt" id="input-box" type="text" placeholder="Search Movies...">
 
+
             </div>
               <div class="results"></div>
         </div>
@@ -62,6 +68,8 @@
         
     </div>
     </div>
+
+
     <div id="error" class="ui basic modal">
         <div class="ui icon header">
           <i class="archive icon"></i>
@@ -82,26 +90,21 @@
         </div>
       </div>
 
+
+  <div class="container" id="movies-searchable"></div>
+  <div id="movies-container">
+      
+
+  </div>
+</div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
 
-  
-        <div class="container" id="movies-searchable"></div>
-        <div id="movies-container">
-            
-
-        </div>
-      </div>
-
 
         
-
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-    <!-- <script src="semantic/dist/semantic.min.js"></script> -->
-
     <script src="project1.js"></script>
 </body>
 </html>
