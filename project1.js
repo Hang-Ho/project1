@@ -121,7 +121,7 @@ $(document).ready(function () {
 
                 movieNameArr.push(data[i].title);
                 const runTime = $("<p>").text("Run time: " + data[i].runningTimeInMinutes + " minutes");
-                const actorDiv = $("<div>");
+                const actorDiv = $("<div>");``
                 let actorsText = "";
 
                 for (let j = 0; j < data[i].principals.length; j++) {
